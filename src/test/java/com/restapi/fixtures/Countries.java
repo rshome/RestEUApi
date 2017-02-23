@@ -8,8 +8,8 @@ import static com.jayway.restassured.RestAssured.get;
 public class Countries {
 
     private static String url;
-    private static int count = 0;
-    private static int sCode = 0;
+    private static int count;
+    private static int sCode;
 
     @Test
     public static void GetCountries() throws Exception
