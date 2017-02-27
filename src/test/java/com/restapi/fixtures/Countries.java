@@ -8,6 +8,7 @@ import gherkin.deps.com.google.gson.reflect.TypeToken;
 import org.json.JSONArray;
 import org.junit.Test;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,31 +44,30 @@ public class Countries {
             List<CountriesData> cDataList = new ArrayList<CountriesData>();
 
             Gson gson = new Gson();
-            java.lang.reflect.Type listType = new TypeToken<List<CountriesData>>() {}.getType();
+            Type listType = new TypeToken<List<CountriesData>>() {}.getType();
 
             cDataList = gson.fromJson(jsonResponse.toString(), listType);
 
             cList = cDataList;
 
-
         }
         catch (Exception e)
         {
-            System.out.println("There is an error connecting to the API " + e);
+            System.out.println("There is an error connecting to the API: " + e);
             e.getStackTrace();
         }
     }
 
 
-    public static int getsCode() {
+    public int getsCode() {
         return sCode;
     }
 
-    public static int getCount() {
+    public int getCount() {
         return count;
     }
 
-    public static List<CountriesData> getcList()
+    public List<CountriesData> getcList()
     {
         return cList;
     }

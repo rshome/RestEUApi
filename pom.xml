@@ -15,12 +15,6 @@
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
     <!-- https://mvnrepository.com/artifact/com.jayway.restassured/rest-assured -->
     <dependency>
       <groupId>com.jayway.restassured</groupId>
@@ -51,25 +45,16 @@
       <version>1.2.5</version>
       <scope>test</scope>
     </dependency>
-      <dependency>
-          <groupId>info.cukes</groupId>
-          <artifactId>gherkin</artifactId>
-          <version>2.12.2</version>
-          <scope>test</scope>
-      </dependency>
-    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+    <dependency>
+      <groupId>info.cukes</groupId>
+      <artifactId>gherkin</artifactId>
+      <version>2.12.2</version>
+      <scope>test</scope>
+    </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
       <version>2.6.0</version>
     </dependency>
-      <dependency>
-          <groupId>amf</groupId>
-          <artifactId>flex-messaging-core</artifactId>
-          <version>1.0</version>
-          <scope>test</scope>
-      </dependency>
-
-
   </dependencies>
 </project>

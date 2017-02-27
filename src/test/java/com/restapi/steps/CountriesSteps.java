@@ -29,7 +29,22 @@ public class CountriesSteps {
     public void theApiCountryResponseReturnsCountriesNameCapitalPopulation(int countries, int index, String name, String capital, int population) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         Assert.assertEquals(countries, countriesclass.getCount());
+    }
 
+    @When("^I receive a successful country response$")
+    public void iReceiveASuccessfulCountryResponse() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        Assert.assertEquals(200, countriesclass.getsCode());
+    }
+
+    @Then("^the api country response returns (.*)$")
+    public void theApiCountryResponseReturnsCountries(int countries) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        Assert.assertEquals(countries, countriesclass.getCount());
+    }
+
+    @Then("^the api country response for Index (.*) returns (.*),(.*),(.*)$")
+    public void theApiCountryResponseForIndexIndexReturnsNameCapitalPopulation(int index, String name, String capital, int population) throws Throwable {
         //Validate a few values from response
         Assert.assertEquals(name, countriesclass.getcList().get(index).name);
         Assert.assertEquals(capital, countriesclass.getcList().get(index).capital);
